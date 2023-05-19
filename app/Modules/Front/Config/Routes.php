@@ -6,10 +6,9 @@ if(!isset($routes))
 }
 
 $routes->group('front', ['namespace' => 'App\Modules\Front\Controllers'], function($subroutes){
-
-	/*** Route for Dashboard a***/
-	$subroutes->add('', 'Dashboard::index');
-	$subroutes->add('dashboard', 'Dashboard::index');
-	$subroutes->add('dashboard2', 'Dashboard::index');
+ 
+	$subroutes->add('', 'Login::index',['filter'=>'noauth']);
+	$subroutes->add('dashboard', 'Dashboard::index',['filter'=>'auth']);
+	$subroutes->add('dashboard2', 'Dashboard::index',['filter'=>'auth']);
 
 });

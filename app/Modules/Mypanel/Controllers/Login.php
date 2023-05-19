@@ -1,9 +1,9 @@
 <?php namespace App\Modules\Mypanel\Controllers;
 
-class Mypanel extends BaseController{
+class Login extends BaseController{
     
     public function index(){
-        echo 'This is my panel index dashboard';
+        echo 'This is my login panel index';
     }
 }
 
