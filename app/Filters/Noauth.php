@@ -9,8 +9,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 class Noauth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null){
-        if(session()->get('isadmLogged')){
-            redirect()->to('/mypanel/dashboard');
+        if(session()->get('isAdmLogged')){
+            return redirect()->to('/mypanel/dashboard');
         }
     }
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null){

@@ -17,7 +17,8 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+    //public string $baseURL = 'http://localhost/cygnus/newcms/';
+    public string $baseURL = 'https://cygnusdvlp.in/newcms/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -42,7 +43,7 @@ class App extends BaseConfig
      * something else. If you are using mod_rewrite to remove the page set this
      * variable so that it is blank.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------
@@ -59,7 +60,7 @@ class App extends BaseConfig
      *
      * WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
      */
-    public string $uriProtocol = 'REQUEST_URI';
+    public string $uriProtocol = 'PATH_INFO';
 
     /**
      * --------------------------------------------------------------------------
@@ -351,7 +352,7 @@ class App extends BaseConfig
      *
      * @deprecated Use `Config\Security` $tokenName property instead of using this property.
      */
-    public string $CSRFTokenName = 'csrf_test_name';
+    public string $CSRFTokenName = 'newcms';
 
     /**
      * --------------------------------------------------------------------------
@@ -406,7 +407,7 @@ class App extends BaseConfig
      *
      * @deprecated Use `Config\Security` $redirect property instead of using this property.
      */
-    public bool $CSRFRedirect = false;
+    public bool $CSRFRedirect = true;
 
     /**
      * --------------------------------------------------------------------------

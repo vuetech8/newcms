@@ -9,8 +9,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null){
-        if(!session()->get('isadmLogged')){
-            redirect()->to('/login');
+        if(!session()->get('isAdmLogged')){
+            return redirect()->to('/mypanel');
         }
     }
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null){

@@ -15,6 +15,7 @@
 
 use CodeIgniter\Controller;
 
+
 class BaseController extends Controller
 {
 
@@ -25,7 +26,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['form','main','mypanel'];
 
 	/**
 	 * Constructor.
@@ -40,6 +41,7 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		$this->request = \Config\Services::request();
 	}
 
 }
